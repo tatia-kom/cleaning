@@ -1,0 +1,105 @@
+.form-horizontal {
+  display: flex;
+
+  @media (max-width: $sm) {
+    flex-direction: column;
+  }
+
+  &__block {
+    border-radius: 50px;
+    padding-left: 60px;
+    padding-right: 86px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    position: relative;
+
+    @media (max-width: $sm) {
+      height: 65px;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: $xs) {
+      height: 45px;
+      padding: 0 20px 0 40px;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      left: 24px;
+      top: 20px;
+
+      @media (max-width: $xs) {
+        width: 16px;
+        height: 16px;
+        background-size: cover;
+        top: 15px;
+        left: 16px;
+      }
+    }
+
+    &--name {
+      background: #F2F2F2;
+
+      &:before {
+        background-image: url('../img/user-icon.svg');
+      }
+
+      .form-horizontal__input {
+        width: 285px;
+        color: black;
+
+        @include placeholderColor(black);
+      }
+    }
+
+    &--phone {
+      background: #515151;
+      margin-left: -60px;
+
+      @media (max-width: $sm) {
+        margin-left: 0;
+      }
+
+      &:before {
+        background-image: url('../img/phone-icon.svg');
+      }
+
+      .form-horizontal__input {
+        width: 204px;
+        color: white;
+
+        @include placeholderColor(white);
+      }
+    }
+  }
+
+  &__input {
+    font-family: $font;
+    font-size: 20px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+
+    @media (max-width: $xs) {
+      font-size: 16px;
+      width: 100%;
+    }
+  }
+
+  &__idea {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 12px;
+
+    @media (max-width: $sm) {
+      display: none;
+    }
+  }
+}

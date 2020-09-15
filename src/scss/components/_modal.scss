@@ -1,0 +1,139 @@
+.modal {
+  background: rgba(255, 255, 255, 0.7);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+
+  &--active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &--description {
+
+    .modal__content {
+      width: 1430px;
+
+      @media (max-width: $lg) {
+        width: 900px;
+      }
+
+      @media (max-width: $md) {
+        width: 800px;
+      }
+
+      @media (max-width: $sm) {
+        width: 600px;
+      }
+
+      @media (max-width: $xs) {
+        width: 280px;
+      }
+    }
+  }
+
+  &__content {
+    background: white;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 24px;
+    width: 450px;
+    position: relative;
+    overflow: auto;
+    max-height: 100vh;
+
+    @media (max-width: $xs) {
+      width: 280px;
+    }
+  }
+
+  &__title {
+    font-family: $fontBold;
+    font-size: 24px;
+    line-height: 29px;
+    padding-right: 120px;
+
+    @media (max-width: $xs) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    line-height: 22px;
+    font-family: $fontBold;
+    cursor: pointer;
+    transition: 0.3s;
+
+    @media (max-width: $xs) {
+      right: 16px;
+      top: 16px;
+    }
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+
+
+  &__flex {
+    margin-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media (max-width: $xs) {
+      margin-top: 0;
+      flex-direction: column;
+    }
+  }
+
+  &__column {
+    width: calc(50% - 40px);
+    margin-top: 32px;
+    line-height: 22px;
+
+    @media (max-width: $sm) {
+      width: calc(50% - 16px);
+    }
+
+    @media (max-width: $xs) {
+      width: 100%;
+    }
+
+    ol {
+      margin: 12px 0 0;
+      padding-inline-start: 24px;
+
+      li {
+
+      }
+    }
+  }
+
+  &__name {
+    line-height: 22px;
+    font-family: $fontBold;
+  }
+
+  &__text {
+    margin-top: 40px;
+    line-height: 22px;
+
+    &--center {
+      text-align: center;
+    }
+  }
+}

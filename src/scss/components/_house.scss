@@ -1,0 +1,120 @@
+.house {
+  position: relative;
+  min-height: 1099px;
+  display: flex;
+  align-items: center;
+  margin-top: 61px;
+
+  @media (max-width: $lg) {
+    overflow: hidden;
+  }
+
+  @media (max-width: $md) {
+    min-height: 900px;
+  }
+
+  @media (max-width: $xs) {
+    margin-top: 30px;
+    min-height: 0;
+  }
+
+  &__right {
+    width: 1001px;
+    height: 1099px;
+    background: url('../img/house-bg.svg');
+    background-size: cover;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media (max-width: 1749px) {
+      width: 900px;
+    }
+
+    @media (max-width: $lg) {
+      width: 600px;
+      height: 900px;
+    }
+
+    @media (max-width: $md) {
+      width: 450px;
+    }
+
+    @media (max-width: $sm) {
+      display: none;
+    }
+
+    img {
+      margin-top: 180px;
+
+      @media (max-width: $lg) {
+        max-width: 100%;
+        margin-top: 220px;
+        transform: translateX(20%);
+      }
+
+      @media (max-width: $md) {
+        margin-top: 280px;
+      }
+    }
+  }
+
+  &__left {
+    width: calc(100% - 100px);
+    background: $dark url('../img/house-dots.png') no-repeat left center;
+    padding: 60px 0 73px;
+
+    @media (max-width: 1749px) {
+      width: 100%;
+    }
+
+    @media (max-width: $xs) {
+      padding: 20px 0;
+    }
+  }
+
+  &__content {
+    max-width: 690px;
+
+    @media (max-width: 1749px) {
+      max-width: 600px;
+    }
+
+    @media (max-width: 1299px) {
+      max-width: 550px;
+    }
+
+    @media (max-width: $md) {
+      max-width: 495px;
+    }
+
+    @media (max-width: $sm) {
+      max-width: 100%;
+    }
+  }
+
+  &__text {
+    margin-top: 36px;
+    color: white;
+
+    @media (max-width: $xs) {
+      margin-top: 16px;
+    }
+  }
+
+  .form-horizontal {
+    margin-top: 130px;
+
+    @media (max-width: $md) {
+      margin-top: 80px;
+    }
+
+    @media (max-width: $xs) {
+      margin-top: 20px;
+    }
+  }
+}

@@ -1,0 +1,303 @@
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+
+  @media (max-width: $xs) {
+    position: fixed;
+    z-index: 205;
+    background: white;
+  }
+
+  &--scroll {
+    position: fixed;
+    background: white;
+    z-index: 205;
+    animation: showHeader 0.5s ease-in-out;
+    box-shadow: 0 4px 20px rgba(0,0,0,.1);
+
+    .header-top {
+      display: none;
+
+      @media (max-width: $xs) {
+        display: flex;
+      }
+    }
+  }
+
+  &__mobile-menu-button {
+    display: none;
+
+    @media (max-width: $xs) {
+      display: block;
+      width: 32px;
+      height: 24px;
+      position: relative;
+
+      span {
+        display: block;
+        height: 2px;
+        border-radius: 4px;
+        background: $yellow;
+        position: absolute;
+        left: 0;
+        width: 100%;
+
+        &:nth-child(1) {
+          top: 0;
+        }
+
+        &:nth-child(2) {
+          top: 11px;
+        }
+
+        &:nth-child(3) {
+          bottom: 0;
+        }
+      }
+
+      &--active {
+        span {
+          &:nth-child(1) {
+            transform: rotate(45deg);
+            top: 12px;
+          }
+
+          &:nth-child(2) {
+            display: none;
+          }
+
+          &:nth-child(3) {
+            transform: rotate(-45deg);
+            bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes showHeader {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 122px;
+  position: relative;
+
+  @media (max-width: $xs) {
+    height: auto;
+    padding: 5px 0 15px;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    background: #E5E5E5;
+    width: 1338px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media (max-width: $lg) {
+      width: 1000px;
+    }
+
+    @media (max-width: $md) {
+      width: 850px;
+    }
+
+    @media (max-width: $sm) {
+      width: 600px;
+    }
+
+    @media (max-width: $xs) {
+      width: 280px;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media (max-width: $lg) {
+      transform: translateX(-250px);
+    }
+
+    @media (max-width: $md) {
+      transform: translateX(-50%);
+    }
+
+    @media (max-width: $xs) {
+      display: none;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__right {
+    display: flex;
+
+    @media (max-width: $md) {
+      flex-direction: column;
+    }
+  }
+
+  .socials {
+    @media (max-width: $xs) {
+      display: none;
+    }
+  }
+
+  .header-info {
+    &__email {
+      @media (max-width: $xs) {
+        display: none;
+      }
+    }
+  }
+}
+
+.header-info {
+  display: flex;
+  flex-direction: column;
+  margin-right: 26px;
+
+  &__email {
+    position: relative;
+    font-size: 16px;
+    line-height: 19px;
+    color: #979797;
+    padding-left: 30px;
+
+    &:hover {
+      color: black;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      left: 0;
+      top: 1px;
+      background: url('../img/mail.svg');
+    }
+  }
+
+  &__phone {
+    color: black;
+    font-size: 24px;
+    line-height: 29px;
+    margin-top: 4px;
+
+    @media (max-width: $sm) {
+      font-size: 18px;
+    }
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    display: block;
+    margin-right: 16px;
+
+    &:hover {
+      svg path {
+        fill: black;
+      }
+    }
+
+    svg {
+      path {
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+.header-menu {
+  padding: 24px 0 29px;
+
+  @media (max-width: $sm) {
+    padding-bottom: 24px;
+  }
+
+  @media (max-width: $xs) {
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+
+    &--active {
+      height: 235px;
+      padding: 10px 0;
+    }
+  }
+
+  &__flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: $xs) {
+      flex-direction: column;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 17px;
+    color: black;
+    display: block;
+    margin: 0 16px;
+
+    @media (max-width: $lg) {
+      font-size: 13px;
+    }
+
+    @media (max-width: $sm) {
+      text-align: center;
+    }
+
+    @media (max-width: $xs) {
+      margin: 8px 0;
+      font-size: 16px;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+}

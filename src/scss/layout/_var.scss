@@ -1,0 +1,36 @@
+//fonts
+$font: 'Museo Sans Light';
+$fontMedium: 'Museo Sans Medium';
+$fontBold: 'Museo Sans Bold';
+
+//colors
+
+$yellow: #FFD700;
+$dark: #575756;
+
+//media
+
+$lg: 1599px;
+$md: 1199px;
+$sm: 991px;
+$xs: 767px;
+
+// mixins
+
+@mixin placeholderColor($color) {
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+  &::-ms-input-placeholder {
+    color: $color;
+  }
+  &::placeholder {
+    color: $color;
+  }
+}

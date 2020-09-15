@@ -1,0 +1,470 @@
+.calculator {
+  padding-top: 200px;
+
+  @media (max-width: $md) {
+    padding-top: 100px;
+  }
+
+  @media (max-width: $xs) {
+    padding-top: 30px;
+  }
+
+  &__flex {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $md) {
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: $xs) {
+      flex-direction: column;
+      margin-top: 20px;
+    }
+
+    &--wrap {
+      flex-wrap: wrap;
+    }
+
+    &--left {
+      justify-content: flex-start;
+    }
+  }
+
+  &__left {
+    flex-grow: 1;
+
+    @media (max-width: $xs) {
+      width: 100%;
+    }
+  }
+
+  &__right {
+    width: 380px;
+    flex-shrink: 0;
+    margin-left: 16px;
+
+    @media (max-width: $md) {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin: 24px 0 0;
+
+      .calculator-block {
+        width: calc(50% - 12px);
+        margin-top: 0!important;
+      }
+    }
+
+    @media (max-width: $xs) {
+      flex-direction: column;
+      margin-top: 0;
+
+      .calculator-block {
+        width: 100%;
+        margin-top: 16px!important;
+      }
+    }
+  }
+
+  &__count-item {
+    width: 25%;
+    margin-bottom: 40px;
+
+    @media (max-width: $lg) {
+      width: 33.33%;
+    }
+
+    @media (max-width: $xs) {
+      width: 160px;
+      align-self: center;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.calculator-block {
+  background: white;
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 24px;
+
+  @media (max-width: $xs) {
+    padding: 16px;
+  }
+
+  &--top16 {
+    margin-top: 16px;
+  }
+
+  &--top24 {
+    margin-top: 24px;
+  }
+
+  &__title {
+    font-family: $fontBold;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &__price {
+    margin-top: 16px;
+    font-family: $fontBold;
+    font-size: 48px;
+    line-height: 58px;
+
+    @media (max-width: $xs) {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+
+  &__price-note {
+    margin-top: 24px;
+  }
+
+  &__card {
+    margin-top: 60px;
+    font-size: 24px;
+    line-height: 29px;
+    font-family: $fontMedium;
+    text-align: center;
+    margin-bottom: 24px;
+
+    @media (max-width: $xs) {
+      font-size: 18px;
+      margin-bottom: 16px;
+      margin-top: 30px;
+    }
+  }
+
+  &__note {
+    margin-top: 40px;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+
+    @media (max-width: $xs) {
+      margin-top: 20px;
+    }
+  }
+
+  &__radios {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+
+    @media (max-width: $lg) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin-top: 48px;
+    }
+
+    @media (max-width: $xs) {
+      flex-direction: column;
+      margin-top: 0;
+    }
+  }
+
+  &__flex {
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $xs) {
+      flex-direction: column;
+      margin-top: 10px;
+    }
+  }
+
+  &__square {
+    flex-grow: 1;
+  }
+
+  &__wc {
+    width: 25%;
+
+    @media (max-width: $lg) {
+      width: 33.33%;
+    }
+
+    @media (max-width: $xs) {
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
+
+  &__subtitle {
+    font-family: $fontBold;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+// form
+
+.calculator-form {
+  margin-top: 26px;
+
+  &__input {
+    width: 100%;
+    display: block;
+    margin-top: 16px;
+    background: #F2F2F2;
+    border-radius: 30px;
+    font-family: $font;
+    font-size: 18px;
+    height: 46px;
+    padding: 0 24px;
+    border: 0;
+
+    @media (max-width: $xs) {
+      font-size: 16px;
+    }
+
+    @include placeholderColor(black);
+
+    &--promocode {
+      background: $yellow;
+      color: white;
+
+      @include placeholderColor(white);
+    }
+
+    &--top40 {
+      margin-top: 40px;
+    }
+  }
+
+  &__textarea {
+    resize: none;
+    width: 100%;
+    display: block;
+    margin-top: 16px;
+    background: #F2F2F2;
+    border-radius: 10px;
+    font-family: $font;
+    font-size: 18px;
+    height: 170px;
+    padding: 12px 24px;
+    border: 0;
+
+    @media (max-width: $xs) {
+      font-size: 16px;
+    }
+
+    @include placeholderColor(black);
+  }
+}
+
+// radio
+
+.calculator-radio {
+  margin-right: 12px;
+
+  @media (max-width: $lg) {
+    margin-top: 12px;
+  }
+
+  @media (max-width: $xs) {
+    width: 100%;
+  }
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+
+    &:checked {
+      & + .calculator-radio__label {
+        background: $yellow;
+        color: white;
+      }
+    }
+  }
+
+  &__label {
+    display: block;
+    border-radius: 50px;
+    transition: 0.3s;
+    cursor: pointer;
+    height: 100%;
+    line-height: 22px;
+    padding: 10px 24px 15px;
+    box-sizing: border-box;
+
+    @media (max-width: $xs) {
+      padding: 6px 12px;
+      text-align: center;
+    }
+  }
+}
+
+// slider
+
+.calculator-slider-wrap {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 16px;
+  width: 80%;
+  flex-shrink: 0;
+
+  @media (max-width: $xs) {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.calculator-slider {
+  flex-grow: 1;
+
+  @media (max-width: $xs) {
+    width: 100%;
+  }
+
+  .fsfull-value {
+    background: #E5E5E5;
+    box-shadow: inset 0px 2px 8px rgba(0, 0, 0, 0.45);
+    border-radius: 8px;
+    height: 16px;
+    margin-top: -5px;
+
+    @media (max-width: $xs) {
+      height: 8px;
+    }
+  }
+
+  .fssel-value {
+    opacity: 0;
+  }
+
+  .fscaret {
+    border-radius: 16px;
+    background: $yellow;
+    width: 73px;
+    height: 29px;
+
+    @media (max-width: $xs) {
+      height: 20px;
+      width: 40px;
+    }
+  }
+}
+.calculator-slider-value {
+  margin-left: 31px;
+  font-family: $fontBold;
+  font-size: 24px;
+  line-height: 29px;
+
+  @media (max-width: $xs) {
+    margin: 5px auto 0;
+  }
+
+  &:after {
+    content: 'кв.м';
+    margin-left: 5px;
+  }
+}
+
+// count
+
+.calculator-count {
+  margin-top: 11px;
+  background: #E5E5E5;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  width: 160px;
+  height: 43px;
+  display: flex;
+
+  &--yellow {
+    background: $yellow;
+  }
+
+  &__button {
+    font-family: $fontBold;
+    font-size: 24px;
+    line-height: 29px;
+    color: white;
+    padding: 0 11px;
+    cursor: pointer;
+
+    &--plus {
+      padding-left: 7px;
+    }
+  }
+
+  &__num {
+    text-align: center;
+    width: 86px;
+    flex-grow: 1;
+    background: $dark;
+    border-radius: 30px;
+    color: white;
+    font-family: $fontBold;
+    font-size: 24px;
+    line-height: 29px;
+    border: 0;
+    pointer-events: none;
+    margin: 0;
+  }
+}
+
+// checkbox
+
+.calculator-checkbox {
+  margin-right: 40px;
+  margin-bottom: 32px;
+  flex-shrink: 0;
+
+  @media (max-width: $xs) {
+    margin-right: 0;
+    margin-bottom: 16px;
+    width: 100%;
+  }
+
+  &__input {
+    opacity: 0;
+    position: absolute;
+
+    &:checked {
+      & + .calculator-checkbox__label {
+        &:before {
+          border-color: $yellow;
+        }
+
+        &:after {
+          background: $yellow;
+        }
+      }
+    }
+  }
+
+  &__label {
+    cursor: pointer;
+    position: relative;
+    padding-left: 30px;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 1px;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #979797;
+      background: white;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background: #979797;
+      left: 3px;
+      top: 4px;
+    }
+  }
+}

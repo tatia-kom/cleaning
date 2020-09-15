@@ -1,0 +1,72 @@
+.commercial {
+  background: url('../img/commercial-bg.png') no-repeat top right;
+  min-height: 934px;
+
+  @media (max-width: $lg) {
+    background-size: 450px;
+    background-position: top 100px right;
+  }
+
+  @media (max-width: $md) {
+    background-size: 350px;
+    min-height: 0;
+  }
+
+  @media (max-width: $sm) {
+    background: none;
+  }
+
+  &__content {
+    padding: 260px 600px 0 0;
+
+    @media (max-width: 1749px) {
+      padding-right: 650px;
+    }
+
+    @media (max-width: $lg) {
+      padding-right: 400px;
+    }
+
+    @media (max-width: 1299px) {
+      padding-right: 500px;
+    }
+
+    @media (max-width: $md) {
+      padding-right: 350px;
+      padding-top: 100px;
+    }
+
+    @media (max-width: $sm) {
+      padding-right: 0;
+    }
+
+    @media (max-width: $xs) {
+      padding-top: 30px;
+    }
+  }
+
+  &__text {
+    margin-top: 36px;
+
+    @media (max-width: $xs) {
+      margin-top: 16px;
+    }
+  }
+
+  .button {
+    margin-top: 80px;
+    width: 350px;
+    font-size: 24px;
+    line-height: 29px;
+
+    @media (max-width: $sm) {
+      margin-top: 50px;
+    }
+
+    @media (max-width: $xs) {
+      width: 100%;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  }
+}

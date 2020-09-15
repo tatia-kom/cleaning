@@ -1,0 +1,463 @@
+doctype html
+html
+    head
+        meta(http-equiv="text/html" charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title Raisa Pavlovna Cleaning - Уборка квартир и домов в Москве и Московской области
+        link(rel="stylesheet" type="text/css" href="css/style.min.css")
+    body
+        // HEADER
+        include ../components/header.pug
+
+        section.top
+            div.container
+                h1.top__title Уборка квартир и Домов в Москве и Московской области
+                p.top__text Чистота Вашего дома в наших руках!
+
+                form.form-horizontal
+                    div.form-horizontal__block.form-horizontal__block--name
+                        input.form-horizontal__input(placeholder="Как к Вам можно обращаться" type="text")
+                    div.form-horizontal__block.form-horizontal__block--phone
+                        input.form-horizontal__input.tel-input(placeholder="Телефон" type="text")
+                    button.button.button--form(type="submit")
+                        span Заказать уборку
+                    span.form-horizontal__idea
+                        img(src="img/idea.svg")
+
+        section.classic#classic
+            div.container.classic__content
+                h2.title
+                    span Классическая
+                    | уборка
+                p.classic__text Жизнь скоротечна, а время - самый ценный и, к сожалению, невосполнимый человеческий  ресурс. <br />Мы-команда профессионалов, которая с удовольствием возьмёт на себя  рутину поддержания чистоты вашего жилища. Мы стремимся сделать вашу жизнь комфортней. Занимайтесь приятными делами, пока Раиса Павловна (tm)  наводит порядок.
+                p.classic__text
+                    strong Улыбка довольных клиентов - наша величайшая ценность!
+
+                div.classic__flex
+                    div.classic-block
+                        div.classic-block__icon
+                            img(src="img/classic1.svg")
+                        p.classic-block__name Поддерживающая <br />уборка
+                        div.classic-block__bottom
+                            button.classic-block__more.open-modal(data-modal="#description") Подробнее
+                            p.classic-block__price от 7 000 ₽
+                    div.classic-block
+                        div.classic-block__icon
+                            img(src="img/classic2.svg")
+                        p.classic-block__name Генеральная <br />уборка
+                        div.classic-block__bottom
+                            button.classic-block__more.open-modal(data-modal="#description") Подробнее
+                            p.classic-block__price от 17 000 ₽
+                    div.classic-block
+                        div.classic-block__icon
+                            img(src="img/classic3.svg")
+                        p.classic-block__name После <br />ремонта
+                        div.classic-block__bottom
+                            button.classic-block__more.open-modal(data-modal="#description") Подробнее
+                            p.classic-block__price от 9 999 ₽
+
+        section.furniture#furniture
+            div.container
+                h2.title.title--center
+                    span Уход за
+                    | мебелью
+                p.furniture__text Заботливо приведём ваш любимый винтажный диван, а так же практически любую другую мягкую мебель, в порядок! <br />Для достижения потрясающего результата мы используем профессиональное оборудование и лучшие чистящие средства. <br /><strong>Важно! Сумма минимального заказа услуги химчистки - от 3000 р.</strong>
+                p.furniture__text.furniture__text--small Мебель из кожи/экокожи: +20% от базовой стоимости.
+
+                div.furniture-slider
+                    div.furniture-slider__slide
+                        div.furniture-block
+                            div.furniture-block__img
+                                img(src="img/furniture2.jpg")
+                            p.furniture-block__name Диван
+                            p.furniture-block__description 2-х местный / 3-х местный
+                            div.furniture-block__bottom
+                                button.furniture-block__order.open-modal(data-modal="#form") Заказать уборку
+                                p.furniture-block__price 1500 ₽ / 2000 ₽
+                    div.furniture-slider__slide
+                        div.furniture-block
+                            div.furniture-block__img
+                                img(src="img/furniture3.jpg")
+                            p.furniture-block__name Диван угловой
+                            p.furniture-block__description 4-х местный / 5-и местный
+                            div.furniture-block__bottom
+                                button.furniture-block__order.open-modal(data-modal="#form") Заказать уборку
+                                p.furniture-block__price 2500 ₽ / 3000 ₽
+                    div.furniture-slider__slide
+                        div.furniture-block
+                            div.furniture-block__img
+                                img(src="img/furniture1.jpg")
+                            p.furniture-block__name Кресло
+                            p.furniture-block__description одноместное, компьютерное
+                            div.furniture-block__bottom
+                                button.furniture-block__order.open-modal(data-modal="#form") Заказать уборку
+                                p.furniture-block__price 800 ₽
+                    div.furniture-slider__slide
+                        div.furniture-block
+                            div.furniture-block__img
+                                img(src="img/furniture1.jpg")
+                            p.furniture-block__name Кресло
+                            p.furniture-block__description одноместное, компьютерное
+                            div.furniture-block__bottom
+                                button.furniture-block__order.open-modal(data-modal="#form") Заказать уборку
+                                p.furniture-block__price 800 ₽
+
+        section.house#cottage
+            div.house__right
+                img(src="img/house.png")
+            div.house__left
+                div.container
+                    div.house__content
+                        h2.title.title--white
+                            span Уборка коттеджей
+                            | и летних домиков
+                        p.house__text Мы любим наших клиентов, особенно постоянных :)
+                        p.house__text Предоставляем скидки и специальные условия владельцам коттеджей и крупной недвижимости.
+                        p.house__text Наш менеджер с удовольствием разработает для Вас индивидуальное предложение по уборке вашего загородного дома. Оставьте заявку и мы свяжемся с вами в удобное время.
+
+                    form.form-horizontal
+                        div.form-horizontal__block.form-horizontal__block--name
+                            input.form-horizontal__input(placeholder="Как к Вам можно обращаться" type="text")
+                        div.form-horizontal__block.form-horizontal__block--phone
+                            input.form-horizontal__input.tel-input(placeholder="Телефон" type="text")
+                        button.button.button--form(type="submit")
+                            span Заказать уборку
+
+        section.services#services
+            div.container
+                h2.title.title--center
+                    span Дополнительные
+                    | услуги
+                p.services__text Заботливо приведём ваш любимый винтажный диван, а так же практически любую другую мягкую мебель, в порядок! <br />Для достижения потрясающего результата мы используем профессиональное <br />оборудование и лучшие чистящие средства.
+
+                div.services__flex
+                    div.services-item.open-modal(data-modal="#description")
+                        div.services-item__icon
+                            img(src="img/service1.svg")
+                        p.services-item__name Мойка окон
+                    div.services-item.open-modal(data-modal="#description")
+                        div.services-item__icon
+                            img(src="img/service2.svg")
+                        p.services-item__name Очистка духового шкафа
+                    div.services-item.open-modal(data-modal="#description")
+                        div.services-item__icon
+                            img(src="img/service3.svg")
+                        p.services-item__name Очистка холодильника
+                    div.services-item.open-modal(data-modal="#description")
+                        div.services-item__icon
+                            img(src="img/service4.svg")
+                        p.services-item__name Очистка микроволновой <br />печи
+                    div.services-item.open-modal(data-modal="#description")
+                        div.services-item__icon
+                            img(src="img/service5.svg")
+                        p.services-item__name Уборка балкона
+                    div.services-item.open-modal(data-modal="#description")
+                        div.services-item__icon
+                            img(src="img/service6.svg")
+                        p.services-item__name Мытье люстры
+                    div.services-item.open-modal(data-modal="#description")
+                        div.services-item__icon
+                            img(src="img/service7.svg")
+                        p.services-item__name Глажка белья
+                    div.services-item.open-modal(data-modal="#description")
+                        div.services-item__icon
+                            img(src="img/service8.svg")
+                        p.services-item__name Мытье посуды
+                    div.services-item.open-modal(data-modal="#description")
+                        div.services-item__icon
+                            img(src="img/service9.svg")
+                        p.services-item__name Уборка в шкафах
+                    div.services-item.open-modal(data-modal="#description")
+                        div.services-item__icon
+                            img(src="img/service10.svg")
+                        p.services-item__name Замена постельного <br />белья
+                    div.services-item.open-modal(data-modal="#description")
+                        div.services-item__icon
+                            img(src="img/service11.svg")
+                        p.services-item__name Эко-уборка
+                    div.services-item.open-modal(data-modal="#description")
+                        div.services-item__icon
+                            img(src="img/service12.svg")
+                        p.services-item__name Забрать/вернуть ключи
+                    div.services-item.open-modal(data-modal="#description")
+                        div.services-item__icon
+                            img(src="img/service13.svg")
+                        p.services-item__name Уборка особых <br />загрязнений
+                    div.services-item.open-modal(data-modal="#description")
+                        div.services-item__icon
+                            img(src="img/service14.svg")
+                        p.services-item__name Уход за предметами <br />питомца
+                    div.services-item.open-modal(data-modal="#description")
+                        div.services-item__icon
+                            img(src="img/service15.svg")
+                        p.services-item__name Доставка дополнительного <br />оборудования для уборки
+
+        section.commercial#commercial
+            div.container
+                div.commercial__content
+                    h2.title
+                        span Уборка
+                        | коммерческих <br />объектов
+                    p.commercial__text Жизнь скоротечна, а время - самый ценный и, к сожалению, невосполнимый человеческий  ресурс.
+                    p.commercial__text Мы-команда профессионалов, которая с удовольствием возьмёт на себя  рутину поддержания чистоты вашего жилища.
+                    p.commercial__text Мы стремимся сделать вашу жизнь комфортней. Занимайтесь приятными делами, пока Раиса Павловна (tm)  наводит порядок.
+                    p.commercial__text
+                        strong Улыбка довольных клиентов - наша величайшая ценность!
+
+                button.button.open-modal(data-modal="#form") Заказать уборку
+
+        section.about#about
+            div.container.about__main
+                div.about__logo
+                    img(src="img/about-logo.svg")
+                div.about__content
+                    h2.title
+                        span О Раисе
+                        | Павловне
+                    p.about__text *On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.
+                    p.about__text These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted.
+                    p.about__text The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
+
+                    div.about__flex
+                        div.about-item
+                            div.about-item__icon
+                                img(src="img/about1.svg")
+                            p.about-item__name Страхование имущества
+                        div.about-item
+                            div.about-item__icon
+                                img(src="img/about2.svg")
+                            p.about-item__name Скидки для постоянных <br />клиентов
+                        div.about-item
+                            div.about-item__icon
+                                img(src="img/about3.svg")
+                            p.about-item__name Опыт работы более <br />10 лет*
+                        div.about-item
+                            div.about-item__icon
+                                img(src="img/about4.svg")
+                            p.about-item__name Проверка и обучение <br />клинеров
+                        div.about-item
+                            div.about-item__icon
+                                img(src="img/about5.svg")
+                            p.about-item__name Использование профессиональных <br />средств и оборудования
+
+        section.reviews#reviews
+            div.container.reviews__main
+                h2.title.title--white
+                    span Наши работы
+                    | <br />и отзывы
+
+                div.reviews__slider
+                    div.reviews__slide
+                        div.review
+                            div.review__before
+                                img(src="img/review.png")
+                                span До
+                            div.review__after
+                                img(src="img/review.png")
+                                span После
+                            div.review__content
+                                p.review__name Ирина Александровна
+                                p.review__city г. Москва
+                                p.review__text On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs
+
+                    div.reviews__slide
+                        div.review
+                            div.review__before
+                                img(src="img/review.png")
+                                span До
+                            div.review__after
+                                img(src="img/review.png")
+                                span После
+                            div.review__content
+                                p.review__name Елена Сергеева
+                                p.review__city г. Видное
+                                p.review__text On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs
+
+        section.calculator#calculator
+            div.container
+                h2.title.title--center
+                    span Расчет
+                    | стоимости
+
+                form.calculator__flex
+                    div.calculator__left
+                        div.calculator-block
+                            p.calculator-block__title Тип уборки
+
+                            div.calculator-block__radios
+                                div.calculator-radio
+                                    input.calculator-radio__input(type="radio" id="type1" name="cleaningType" checked)
+                                    label.calculator-radio__label(for="type1") Поддерживающая уборка
+                                div.calculator-radio
+                                    input.calculator-radio__input(type="radio" id="type2" name="cleaningType")
+                                    label.calculator-radio__label(for="type2") Генеральная уборка
+                                div.calculator-radio
+                                    input.calculator-radio__input(type="radio" id="type3" name="cleaningType")
+                                    label.calculator-radio__label(for="type3") Профессиональная <br />уборка кухни
+                                div.calculator-radio
+                                    input.calculator-radio__input(type="radio" id="type4" name="cleaningType")
+                                    label.calculator-radio__label(for="type4") Профессиональная <br />уборка санузла
+                                div.calculator-radio
+                                    input.calculator-radio__input(type="radio" id="type5" name="cleaningType")
+                                    label.calculator-radio__label(for="type5") После ремонта
+
+                            div.calculator-block__flex
+                                div.calculator-block__square
+                                    p.calculator-block__subtitle Площадь
+                                    div.calculator-slider-wrap
+                                        div.calculator-slider
+                                        span.calculator-slider-value 22
+
+                                div.calculator-block__wc
+                                    p.calculator-block__subtitle Количество санузлов
+                                    div.calculator-count.calculator-count--yellow
+                                        button.calculator-count__button.calculator-count__button--minus -
+                                        input.calculator-count__num(type="text" value="1")
+                                        button.calculator-count__button.calculator-count__button--plus +
+
+                        div.calculator-block.calculator-block--top24
+                            p.calculator-block__title Что нужно сделать
+
+                            div.calculator__flex.calculator__flex--wrap.calculator__flex--left
+                                div.calculator__count-item
+                                    | 1-но створчатое окно
+                                    div.calculator-count
+                                        button.calculator-count__button.calculator-count__button--minus -
+                                        input.calculator-count__num(type="text" value="1")
+                                        button.calculator-count__button.calculator-count__button--plus +
+                                div.calculator__count-item
+                                    | Панорамное окно (м2)
+                                    div.calculator-count
+                                        button.calculator-count__button.calculator-count__button--minus -
+                                        input.calculator-count__num(type="text" value="1")
+                                        button.calculator-count__button.calculator-count__button--plus +
+                                div.calculator__count-item
+                                    | 2-х створчатое окно
+                                    div.calculator-count
+                                        button.calculator-count__button.calculator-count__button--minus -
+                                        input.calculator-count__num(type="text" value="1")
+                                        button.calculator-count__button.calculator-count__button--plus +
+                                div.calculator__count-item
+                                    | 3-х створчатое окно
+                                    div.calculator-count
+                                        button.calculator-count__button.calculator-count__button--minus -
+                                        input.calculator-count__num(type="text" value="1")
+                                        button.calculator-count__button.calculator-count__button--plus +
+                                div.calculator__count-item
+                                    | Балконный блок
+                                    div.calculator-count
+                                        button.calculator-count__button.calculator-count__button--minus -
+                                        input.calculator-count__num(type="text" value="1")
+                                        button.calculator-count__button.calculator-count__button--plus +
+                                div.calculator__count-item
+                                    | Духовой шкаф
+                                    div.calculator-count
+                                        button.calculator-count__button.calculator-count__button--minus -
+                                        input.calculator-count__num(type="text" value="1")
+                                        button.calculator-count__button.calculator-count__button--plus +
+                                div.calculator__count-item
+                                    | Микроволновая печь
+                                    div.calculator-count
+                                        button.calculator-count__button.calculator-count__button--minus -
+                                        input.calculator-count__num(type="text" value="1")
+                                        button.calculator-count__button.calculator-count__button--plus +
+                                div.calculator__count-item
+                                    | Холодильник
+                                    div.calculator-count
+                                        button.calculator-count__button.calculator-count__button--minus -
+                                        input.calculator-count__num(type="text" value="1")
+                                        button.calculator-count__button.calculator-count__button--plus +
+                                div.calculator__count-item
+                                    | Уборка балкона
+                                    div.calculator-count
+                                        button.calculator-count__button.calculator-count__button--minus -
+                                        input.calculator-count__num(type="text" value="1")
+                                        button.calculator-count__button.calculator-count__button--plus +
+                                div.calculator__count-item
+                                    | Глажка 1 час
+                                    div.calculator-count
+                                        button.calculator-count__button.calculator-count__button--minus -
+                                        input.calculator-count__num(type="text" value="1")
+                                        button.calculator-count__button.calculator-count__button--plus +
+                                div.calculator__count-item
+                                    | Стирка белья
+                                    div.calculator-count
+                                        button.calculator-count__button.calculator-count__button--minus -
+                                        input.calculator-count__num(type="text" value="1")
+                                        button.calculator-count__button.calculator-count__button--plus +
+                                div.calculator__count-item
+                                    | Уборка в шкафах 1 час
+                                    div.calculator-count
+                                        button.calculator-count__button.calculator-count__button--minus -
+                                        input.calculator-count__num(type="text" value="1")
+                                        button.calculator-count__button.calculator-count__button--plus +
+                                div.calculator__count-item
+                                    | Мытье посуды 30 минут
+                                    div.calculator-count
+                                        button.calculator-count__button.calculator-count__button--minus -
+                                        input.calculator-count__num(type="text" value="1")
+                                        button.calculator-count__button.calculator-count__button--plus +
+                                div.calculator__count-item
+                                    | Фрамуга
+                                    div.calculator-count
+                                        button.calculator-count__button.calculator-count__button--minus -
+                                        input.calculator-count__num(type="text" value="1")
+                                        button.calculator-count__button.calculator-count__button--plus +
+
+                        div.calculator-block.calculator-block--top24
+                            p.calculator-block__title Дополнительные данные
+
+                            div.calculator__flex.calculator__flex--wrap.calculator__flex--left
+                                div.calculator-checkbox
+                                    input.calculator-checkbox__input(type="checkbox" id="add1" checked)
+                                    label.calculator-checkbox__label(for="add1") Парогенератор
+                                div.calculator-checkbox
+                                    input.calculator-checkbox__input(type="checkbox" id="add2" checked)
+                                    label.calculator-checkbox__label(for="add2") У меня нет пылесоса
+                                div.calculator-checkbox
+                                    input.calculator-checkbox__input(type="checkbox" id="add3" checked)
+                                    label.calculator-checkbox__label(for="add3") У меня нет стремянки
+                                div.calculator-checkbox
+                                    input.calculator-checkbox__input(type="checkbox" id="add4")
+                                    label.calculator-checkbox__label(for="add4") Доставка ключей
+                                div.calculator-checkbox
+                                    input.calculator-checkbox__input(type="checkbox" id="add5")
+                                    label.calculator-checkbox__label(for="add5") Уборка одноразовыми салфетками
+
+                    div.calculator__right
+                        div.calculator-block
+                            p.calculator-block__title Информация о заказе
+                            div.calculator-form
+                                input.calculator-form__input(type="text" placeholder="Как к Вам можно обращаться")
+                                input.calculator-form__input.tel-input(type="text" placeholder="Телефон")
+                                input.calculator-form__input(type="text" placeholder="Дата и время уборки")
+                                input.calculator-form__input.calculator-form__input--promocode(type="text" placeholder="Промокод")
+                                input.calculator-form__input.calculator-form__input--top40(type="text" placeholder="Адрес")
+                                textarea.calculator-form__textarea(placeholder="Комментарий")
+
+                        div.calculator-block.calculator-block--top16
+                            p.calculator-block__title Стоимость
+                            p.calculator-block__price 2,300руб.
+                            p.calculator-block__price-note Эко уборка ( средства Ecover ) <strong>+ 40%</strong>
+                            p.calculator-block__card Оплата картой
+                            button.button.button--calculator Оплата наличными
+                            p.calculator-block__note *после проверки качества уборки вам придёт <br />ссылка на оплату картой
+
+
+        // FOOTER
+        include ../components/footer.pug
+
+        // MODAL
+        include ../components/modal.pug
+
+        div.calc.goToCalc
+            div.calc__content
+                img(src="img/calc-icon.svg")
+                div.calc__text
+                    | Калькулятор стоимости<br />
+                    strong Рассчитать полную стоимость
+            button.calc__close x
+
+        // SCRIPTS
+        include ../components/scripts.pug
