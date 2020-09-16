@@ -20,10 +20,13 @@ html
                         input.form-horizontal__input(placeholder="Как к Вам можно обращаться" type="text")
                     div.form-horizontal__block.form-horizontal__block--phone
                         input.form-horizontal__input.tel-input(placeholder="Телефон" type="text")
-                    button.button.button--form(type="submit")
+                    button.button.button--form(type="submit").open-modal(data-modal="#thanks")
                         span Заказать уборку
-                    span.form-horizontal__idea
+                    div.form-horizontal__idea.popup-wrap
                         img(src="img/idea.svg")
+
+                        div.popup
+                            | Отправьте заявку, и наш менеджер свяжется с Вами для уточнения деталей уборки и согласования удобного для Вас времени.
 
         section.classic#classic
             div.container.classic__content
@@ -40,21 +43,21 @@ html
                             img(src="img/classic1.svg")
                         p.classic-block__name Поддерживающая <br />уборка
                         div.classic-block__bottom
-                            button.classic-block__more.open-modal(data-modal="#description") Подробнее
+                            button.classic-block__more.open-modal(data-modal="#supportCleaning") Подробнее
                             p.classic-block__price от 7 000 ₽
                     div.classic-block
                         div.classic-block__icon
                             img(src="img/classic2.svg")
                         p.classic-block__name Генеральная <br />уборка
                         div.classic-block__bottom
-                            button.classic-block__more.open-modal(data-modal="#description") Подробнее
+                            button.classic-block__more.open-modal(data-modal="#generalCleaning") Подробнее
                             p.classic-block__price от 17 000 ₽
                     div.classic-block
                         div.classic-block__icon
                             img(src="img/classic3.svg")
                         p.classic-block__name После <br />ремонта
                         div.classic-block__bottom
-                            button.classic-block__more.open-modal(data-modal="#description") Подробнее
+                            button.classic-block__more.open-modal(data-modal="#afterCleaning") Подробнее
                             p.classic-block__price от 9 999 ₽
 
         section.furniture#furniture
@@ -79,7 +82,7 @@ html
                         div.furniture-block
                             div.furniture-block__img
                                 img(src="img/furniture3.jpg")
-                            p.furniture-block__name Диван угловой
+                            p.furniture-block__name Диван
                             p.furniture-block__description 4-х местный / 5-и местный
                             div.furniture-block__bottom
                                 button.furniture-block__order.open-modal(data-modal="#form") Заказать уборку
@@ -87,12 +90,21 @@ html
                     div.furniture-slider__slide
                         div.furniture-block
                             div.furniture-block__img
-                                img(src="img/furniture1.jpg")
-                            p.furniture-block__name Кресло
-                            p.furniture-block__description одноместное, компьютерное
+                                img(src="img/furniture4.jpg")
+                            p.furniture-block__name Стул
+                            p.furniture-block__description с тканевой спинкой
                             div.furniture-block__bottom
                                 button.furniture-block__order.open-modal(data-modal="#form") Заказать уборку
-                                p.furniture-block__price 800 ₽
+                                p.furniture-block__price 500 ₽
+                    div.furniture-slider__slide
+                        div.furniture-block
+                            div.furniture-block__img
+                                img(src="img/furniture5.jpg")
+                            p.furniture-block__name Пуфик
+                            p.furniture-block__description &nbsp;
+                            div.furniture-block__bottom
+                                button.furniture-block__order.open-modal(data-modal="#form") Заказать уборку
+                                p.furniture-block__price 400 ₽
                     div.furniture-slider__slide
                         div.furniture-block
                             div.furniture-block__img
@@ -121,7 +133,7 @@ html
                             input.form-horizontal__input(placeholder="Как к Вам можно обращаться" type="text")
                         div.form-horizontal__block.form-horizontal__block--phone
                             input.form-horizontal__input.tel-input(placeholder="Телефон" type="text")
-                        button.button.button--form(type="submit")
+                        button.button.button--form(type="submit").open-modal(data-modal="#thanks")
                             span Заказать уборку
 
         section.services#services
@@ -129,68 +141,113 @@ html
                 h2.title.title--center
                     span Дополнительные
                     | услуги
-                p.services__text Заботливо приведём ваш любимый винтажный диван, а так же практически любую другую мягкую мебель, в порядок! <br />Для достижения потрясающего результата мы используем профессиональное <br />оборудование и лучшие чистящие средства.
+                p.services__text Раиса Павловна<sup>(тм)</sup> сделает всё, чтобы у вас было чисто. Мы не ограничиваемся мытьем полов и уборкой пыли с поверхностей. Хотите большего - просто предупредите нас об этом.
 
                 div.services__flex
                     div.services-item.open-modal(data-modal="#description")
-                        div.services-item__icon
+                        div.services-item__icon.popup-wrap
                             img(src="img/service1.svg")
+                            div.popup
+                                span Мойка окон
+                                | On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire
                         p.services-item__name Мойка окон
                     div.services-item.open-modal(data-modal="#description")
-                        div.services-item__icon
+                        div.services-item__icon.popup-wrap
                             img(src="img/service2.svg")
+                            div.popup
+                                span Очистка духового шкафа
+                                | On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire
                         p.services-item__name Очистка духового шкафа
                     div.services-item.open-modal(data-modal="#description")
-                        div.services-item__icon
+                        div.services-item__icon.popup-wrap
                             img(src="img/service3.svg")
+                            div.popup
+                                span Очистка холодильника
+                                | On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire
                         p.services-item__name Очистка холодильника
                     div.services-item.open-modal(data-modal="#description")
-                        div.services-item__icon
+                        div.services-item__icon.popup-wrap
                             img(src="img/service4.svg")
+                            div.popup
+                                span Очистка микроволновой печи
+                                | On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire
                         p.services-item__name Очистка микроволновой <br />печи
                     div.services-item.open-modal(data-modal="#description")
-                        div.services-item__icon
+                        div.services-item__icon.popup-wrap
                             img(src="img/service5.svg")
+                            div.popup
+                                span Уборка балкона
+                                | On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire
                         p.services-item__name Уборка балкона
                     div.services-item.open-modal(data-modal="#description")
-                        div.services-item__icon
+                        div.services-item__icon.popup-wrap
                             img(src="img/service6.svg")
+                            div.popup
+                                span Мытье люстры
+                                | On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire
                         p.services-item__name Мытье люстры
                     div.services-item.open-modal(data-modal="#description")
-                        div.services-item__icon
+                        div.services-item__icon.popup-wrap
                             img(src="img/service7.svg")
+                            div.popup
+                                span Глажка белья
+                                | On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire
                         p.services-item__name Глажка белья
                     div.services-item.open-modal(data-modal="#description")
-                        div.services-item__icon
+                        div.services-item__icon.popup-wrap
                             img(src="img/service8.svg")
+                            div.popup
+                                span Мытье посуды
+                                | On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire
                         p.services-item__name Мытье посуды
                     div.services-item.open-modal(data-modal="#description")
-                        div.services-item__icon
+                        div.services-item__icon.popup-wrap
                             img(src="img/service9.svg")
+                            div.popup
+                                span Уборка в шкафах
+                                | On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire
                         p.services-item__name Уборка в шкафах
                     div.services-item.open-modal(data-modal="#description")
-                        div.services-item__icon
+                        div.services-item__icon.popup-wrap
                             img(src="img/service10.svg")
+                            div.popup
+                                span Замена постельного белья
+                                | On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire
                         p.services-item__name Замена постельного <br />белья
                     div.services-item.open-modal(data-modal="#description")
-                        div.services-item__icon
+                        div.services-item__icon.popup-wrap
                             img(src="img/service11.svg")
+                            div.popup
+                                span Эко-уборка
+                                | On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire
                         p.services-item__name Эко-уборка
                     div.services-item.open-modal(data-modal="#description")
-                        div.services-item__icon
+                        div.services-item__icon.popup-wrap
                             img(src="img/service12.svg")
+                            div.popup
+                                span Забрать/вернуть ключи
+                                | On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire
                         p.services-item__name Забрать/вернуть ключи
                     div.services-item.open-modal(data-modal="#description")
-                        div.services-item__icon
+                        div.services-item__icon.popup-wrap
                             img(src="img/service13.svg")
+                            div.popup
+                                span Уборка особых загрязнений
+                                | On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire
                         p.services-item__name Уборка особых <br />загрязнений
                     div.services-item.open-modal(data-modal="#description")
-                        div.services-item__icon
+                        div.services-item__icon.popup-wrap
                             img(src="img/service14.svg")
+                            div.popup
+                                span Уход за предметами питомца
+                                | On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire
                         p.services-item__name Уход за предметами <br />питомца
                     div.services-item.open-modal(data-modal="#description")
-                        div.services-item__icon
+                        div.services-item__icon.popup-wrap
                             img(src="img/service15.svg")
+                            div.popup
+                                span Доставка дополнительного оборудования для уборки
+                                | On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire
                         p.services-item__name Доставка дополнительного <br />оборудования для уборки
 
         section.commercial#commercial

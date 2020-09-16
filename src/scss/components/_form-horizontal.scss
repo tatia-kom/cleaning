@@ -97,6 +97,51 @@
     align-items: center;
     cursor: pointer;
     margin-left: 12px;
+    position: relative;
+
+    @media (max-width: 1299px) {
+      &:hover {
+        .popup {
+          transform: translate(-50%, 0);
+        }
+      }
+
+      .popup {
+        left: 50%;
+        right: auto;
+        top: auto;
+        bottom: calc(100% + 6px);
+        transform: translate(-50%, 0);
+
+        &:before {
+          right: auto;
+          left: 50%;
+          transform: translateX(-50%);
+          top: 100%;
+          bottom: auto;
+          border-color: white transparent transparent transparent;
+          border-width: 17px 7px 0 7px;
+        }
+      }
+    }
+
+    @media (max-width: $md) {
+      &:hover {
+        .popup {
+          transform: translate(-100%, 0);
+        }
+      }
+
+      .popup {
+        left: 100%;
+        transform: translate(-100%, 0);
+
+        &:before {
+          left: auto;
+          right: 6px;
+        }
+      }
+    }
 
     @media (max-width: $sm) {
       display: none;

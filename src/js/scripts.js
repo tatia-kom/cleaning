@@ -134,5 +134,19 @@ $(document).ready(function() {
         $(this).parents('.modal').removeClass('modal--active');
     });
 
+    $('.review__before').click(function(e) {
+        e.preventDefault();
+        var img = $(this).find('img').attr('src');
+        $('#photo img').attr('src', img);
+        $('#photo').addClass('modal--active');
+    });
+
+    $('.review__after').click(function(e) {
+        e.preventDefault();
+        var img = $(this).find('img').attr('src');
+        $('#photo img').attr('src', img);
+        $('#photo').addClass('modal--active');
+    });
+
 });
 

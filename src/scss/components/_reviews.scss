@@ -215,6 +215,7 @@
     border-radius: 8px;
     overflow: hidden;
     position: relative;
+    cursor: pointer;
 
     @media (max-width: $lg) {
       width: 346px;
@@ -285,6 +286,7 @@
     overflow: hidden;
     margin-left: -110px;
     position: relative;
+    cursor: pointer;
 
     @media (max-width: $lg) {
       width: 428px;
