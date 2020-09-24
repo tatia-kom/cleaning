@@ -142,6 +142,10 @@ strong {
         @media (max-width: $xs) {
             font-size: 12px;
             margin-left: -12px;
+
+            &:hover {
+                background: $yellow!important;
+            }
         }
 
         &:before {

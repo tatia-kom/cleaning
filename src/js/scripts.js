@@ -65,14 +65,18 @@ $(document).ready(function() {
         e.preventDefault();
         var input = $(this).parent().find('.calculator-count__num');
         var num = parseInt(input.val());
+        var min = parseInt(input.attr('data-min'));
+        var max = parseInt(input.attr('data-max'));
 
         if ($(this).hasClass('calculator-count__button--minus')) {
-            if (num > 0) {
+            if (num > min) {
                 input.val(num-1);
             }
         }
         else {
-            input.val(num+1);
+            if (num < max) {
+                input.val(num + 1);
+            }
         }
 
         if (input.attr('id') == 'rooms') {
@@ -92,7 +96,7 @@ $(document).ready(function() {
         var href = $(this).attr('href');
         var num = $(href).offset().top;
         if ($(window).width() < 768) {
-            num = num - 100;
+            num = num - 140;
         }
         $('html, body').animate({scrollTop: num + 'px'});
 
@@ -101,7 +105,12 @@ $(document).ready(function() {
     });
 
     $('.goToCalc').click(function(e) {
-        $('html, body').animate({scrollTop: $('#calculator').offset().top + 'px'});
+        if ($(window).width() < 768) {
+            $('html, body').animate({scrollTop: $('#calculator').offset().top - 141 + 'px'});
+        }
+        else {
+            $('html, body').animate({scrollTop: $('#calculator').offset().top + 'px'});
+        }
     });
 
     // modal
