@@ -54,6 +54,10 @@
     @media (max-width: $xs) {
       margin-top: 16px;
     }
+
+    &--center {
+      text-align: center;
+    }
   }
 
   &__flex {

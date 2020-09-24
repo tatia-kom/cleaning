@@ -35,7 +35,7 @@ function htmlBuild() {
 }
 
 function jsBuild() {
-	return gulp.src(['src/js/freshslider.min.js', 'src/js/slick.min.js', 'src/js/inputmask.js', 'src/js/jquery.inputmask.js', 'src/js/scripts.js'])
+	return gulp.src(['src/js/datepicker.min.js', 'src/js/slick.min.js', 'src/js/inputmask.js', 'src/js/jquery.inputmask.js', 'src/js/scripts.js'])
         .pipe(concat('all-scripts.js'))
            .pipe(gulp.dest('build/js/'));
 }

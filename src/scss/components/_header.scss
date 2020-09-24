@@ -31,7 +31,7 @@
 
     @media (max-width: $xs) {
       display: block;
-      width: 32px;
+      width: 26px;
       height: 24px;
       position: relative;
 
@@ -97,6 +97,7 @@
   @media (max-width: $xs) {
     height: auto;
     padding: 5px 0 15px;
+    flex-wrap: wrap;
   }
 
   &:after {
@@ -127,6 +128,62 @@
     }
   }
 
+  &__regions {
+    margin-right: auto;
+    margin-left: 28px;
+    line-height: 22px;
+    max-width: 200px;
+
+    @media (max-width: $lg) {
+      margin-left: 16px;
+    }
+
+    @media (max-width: $md) {
+      font-size: 14px;
+      line-height: 18px;
+      margin-left: 0;
+    }
+
+    @media (max-width: $xs) {
+      font-size: 12px;
+      line-height: 14px;
+      max-width: 100%;
+      width: 100%;
+      padding: 2px 0 8px;
+      margin: 0;
+      position: relative;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: -20px;
+        right: -20px;
+        height: 1px;
+        background: #E5E5E5;
+      }
+    }
+
+    span {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+      line-height: 17px;
+      color: #979797;
+
+      @media (max-width: $md) {
+        font-size: 12px;
+      }
+
+      @media (max-width: $xs) {
+        font-size: 10px;
+        line-height: 12px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
   &__logo {
     position: absolute;
     top: 22px;
@@ -134,19 +191,36 @@
     transform: translateX(-50%);
 
     @media (max-width: $lg) {
-      transform: translateX(-250px);
+      transform: translateX(-160px);
     }
 
     @media (max-width: $md) {
       transform: translateX(-50%);
     }
 
+    @media (max-width: $sm) {
+      width: 67px;
+      height: 74px;
+      background: url('../img/logo-mini.svg') center no-repeat;
+      background-size: contain;
+      margin-left: 50px;
+    }
+
     @media (max-width: $xs) {
-      display: none;
+      top: 50px;
+      transform: none;
+      margin-left: 0;
+      left: auto;
+      right: 40px;
+      width: 50px;
     }
 
     img {
       max-width: 100%;
+
+      @media (max-width: $sm) {
+        display: none;
+      }
     }
   }
 
@@ -160,7 +234,18 @@
 
   .socials {
     @media (max-width: $xs) {
-      display: none;
+      flex-direction: column;
+      position: absolute;
+      margin: 40px 0 0 150px;
+
+      .socials__item {
+        margin: 10px 0 0;
+
+        &:nth-child(1),
+        &:nth-child(2) {
+          display: none;
+        }
+      }
     }
   }
 
@@ -207,8 +292,19 @@
     line-height: 29px;
     margin-top: 4px;
 
+    @media (max-width: $md) {
+      font-size: 18px;
+      margin-top: 0;
+    }
+
     @media (max-width: $sm) {
       font-size: 18px;
+    }
+
+    @media (max-width: $xs) {
+      font-size: 14px;
+      line-height: 18px;
+      margin-top: 4px;
     }
 
     &:hover {

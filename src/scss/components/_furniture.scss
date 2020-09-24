@@ -1,9 +1,5 @@
 .furniture {
-  padding-top: 150px;
-
-  @media (max-width: $md) {
-    padding-top: 100px;
-  }
+  padding-top: 50px;
 
   @media (max-width: $xs) {
     padding-top: 30px;
@@ -16,6 +12,7 @@
 
     &--small {
       font-size: 14px;
+      line-height: 20px;
       font-family: $fontBold;
     }
   }

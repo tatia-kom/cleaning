@@ -61,19 +61,6 @@ $(document).ready(function() {
 
     // calculator
 
-    $('.calculator-slider').freshslider({
-        range: false,
-        step: 1,
-        text: false,
-        min: 10,
-        max: 200,
-        enabled: true,
-        value: 22,
-        onchange: function(value) {
-            $('.calculator-slider-value').text(value);
-        }
-    });
-
     $('.calculator-count__button').click(function(e) {
         e.preventDefault();
         var input = $(this).parent().find('.calculator-count__num');
@@ -86,6 +73,15 @@ $(document).ready(function() {
         }
         else {
             input.val(num+1);
+        }
+
+        if (input.attr('id') == 'rooms') {
+            if (input.val() > 4) {
+                $('#square').addClass('calculator-block--active');
+            }
+            else {
+                $('#square').removeClass('calculator-block--active');
+            }
         }
     });
 
@@ -106,10 +102,6 @@ $(document).ready(function() {
 
     $('.goToCalc').click(function(e) {
         $('html, body').animate({scrollTop: $('#calculator').offset().top + 'px'});
-    });
-
-    $('.calc__close').click(function(e) {
-        $('.calc').addClass('calc--hidden');
     });
 
     // modal
@@ -148,5 +140,10 @@ $(document).ready(function() {
         $('#photo').addClass('modal--active');
     });
 
+
+    $('#datetimeInput').datepicker({
+        minDate: new Date(),
+        timepicker: true
+    });
 });
 
