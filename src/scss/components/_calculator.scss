@@ -447,6 +447,10 @@
       width: 58px;
       font-size: 18px;
     }
+
+    &--editable {
+      pointer-events: auto;
+    }
   }
 }
 

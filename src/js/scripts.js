@@ -150,7 +150,7 @@ $(document).ready(function() {
     });
 
 
-    $('#datetimeInput').datepicker({
+    $('.datetimeInput').datepicker({
         minDate: new Date(),
         timepicker: true
     });

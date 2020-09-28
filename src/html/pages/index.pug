@@ -276,10 +276,11 @@ html
                     p.about__text Приглашая наших клинеров к себе в дом, вы можете быть абсолютно спокойны - персонал проходит строгий отбор и регулярно обучается передовым методам и технологиям ведения уборки. Ваше имущество на момент уборки страхуется от повреждений и других неловких ситуаций.
                     p.about__text Мы стремимся расширять список оказываемых услуг и предлагать нашим клиентам больше, чем они ждут от клининговой компании.
 
-                    p.about__text.about__text--center Летайте на другие планеты,
-                    p.about__text.about__text--center Покоряйте Вершины,
-                    p.about__text.about__text--center Создавайте Шедевры или просто Наслаждайтесь Жизнью...
-                    p.about__text.about__text--center ...пока профессионалы наводят для Вас порядок.
+                    p.about__text.about__text--quote
+                        | Летайте на другие планеты,<br />
+                        | Покоряйте Вершины,<br />
+                        | Создавайте Шедевры или просто Наслаждайтесь Жизнью...<br />
+                        | ...пока профессионалы наводят для Вас порядок.
 
                     div.about__flex
                         div.about-item
@@ -373,7 +374,7 @@ html
                                     p.calculator-block__subtitle Площадь
                                     div.calculator-count
                                         button.calculator-count__button.calculator-count__button--minus -
-                                        input.calculator-count__num(type="text" value="140")
+                                        input.calculator-count__num.calculator-count__num--editable(type="text" value="140")
                                         button.calculator-count__button.calculator-count__button--plus +
 
                                 div.calculator-block__wc
@@ -489,7 +490,7 @@ html
                             div.calculator-form
                                 input.calculator-form__input(type="text" placeholder="Как к Вам обращаться")
                                 input.calculator-form__input.tel-input(type="text" placeholder="Телефон")
-                                input.calculator-form__input#datetimeInput(type="text" placeholder="Дата и время уборки")
+                                input.calculator-form__input.datetimeInput(type="text" placeholder="Дата и время уборки")
                                 input.calculator-form__input.calculator-form__input--promocode(type="text" placeholder="Промокод")
                                 input.calculator-form__input.calculator-form__input--top40(type="text" placeholder="Адрес")
                                 textarea.calculator-form__textarea(placeholder="Комментарий. Например, «Позвонить за день до визита»")
